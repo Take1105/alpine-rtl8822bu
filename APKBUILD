@@ -1,7 +1,7 @@
 # Contributor: Ben Allen <bensallen@me.com>
 # Maintainer: Ben Allen <bensallen@me.com>
 
-# when chaning _ver we *must* bump _rel
+# when changing _ver we *must* bump _rel
 _name=rtl8822bu
 _ver=c28a0c388a0acb6c79df645c2903cc90432d0f0a
 _rel=0
@@ -43,6 +43,5 @@ package() {
 	cd "$builddir"
 	mkdir -p $pkgdir/lib/modules/$_kabi/kernel/drivers/net/wireless/ 
 	install -p -m 644 *.ko $pkgdir/lib/modules/$_kabi/kernel/drivers/net/wireless/ 
-	#make MODDESTDIR=$pkgdir/lib/modules/$_kabi/kernel/drivers/net/wireless/ KVER=$_kabi install
 }
 sha512sums="61bc4db02dc432b031fa75c91c5a3f978de39bde4a1276072c19f47fc84bedd8c9f354619310b00a18735743c963d42ede3a186fde66e42d7b19b8644606e162  rtl8822bu-c28a0c388a0acb6c79df645c2903cc90432d0f0a.tar.gz"
